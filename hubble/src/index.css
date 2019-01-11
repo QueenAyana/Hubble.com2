@@ -6,20 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.jumbotron{
-  height: 56rem;
-  clear: both;
-  margin-top: 2rem; 
-  text-Align: center;
-  color: coral;
   background: 
   linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
   linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -29,5 +15,19 @@ code {
   linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
   background-color: #131313 !important;
   background-size: 20px 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.jumbotron{
+  height: 470rem;
+  clear: both;
+  margin-top: 2rem; 
+  text-Align: center;
+  color: red;
+  background-image : url(https://i.pinimg.com/736x/d8/d4/27/d8d42723be99f121df80b5be991c81e1--light-wood-texture-wood-grain-texture.jpg);
   font-family: cursive;
 }
