@@ -16,6 +16,9 @@ export default {
   },
   saveUser: function(userData){
       return axios.post("/api/users", userData)
-  }
+  },
+  savePersonality: function(userData){
+      return axios.put("/api/users", userData)
+  },
 //   delete specific hobby from list
 };

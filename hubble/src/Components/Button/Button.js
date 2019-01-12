@@ -1,33 +1,40 @@
 import React from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-
-const Button = props => (
-    <span className="defaultBtn"{...props}>
-    </span>
+const QuestionForm = props => (
+        <FormGroup tag="fieldset">
+            <legend>{props.question}</legend>
+            <FormGroup>
+                <Label>
+                    <Input type="radio" name="radio1" />{' '}
+                    Mostly Disagree
+            </Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>
+                    <Input type="radio" name="radio1" />{' '}
+                    Slightly Disagree
+            </Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>
+                    <Input type="radio" name="radio1" />{' '}
+                    Neutral
+            </Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>
+                    <Input type="radio" name="radio1" />{' '}
+                    Slightly Agree
+            </Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>
+                    <Input type="radio" name="radio1" />{' '}
+                    Mostly Agree
+            </Label>
+            </FormGroup>
+        </FormGroup>
 );
-// const SignUpButton = props => (
-//     <span className="signUpBtn"{...props}>
-//         Sign Up
-//     </span>
-// );
-// const SignOutButton = props => (
-//     <span className="signOutBtn"{...props}>
-//         Sign Out
-//     </span>
-// );
-// const YourHobbiesButton = props => (
-//     <span className="hobbyBtn"{...props}>
-//         See Your Hobbies
-//     </span>
-// );
-// const SubmitButton = props => (
-//     <span className="submitBtn"{...props}>
-//         Submit
-//     </span>
-// );
 
-export default Button;
-// export default SignUpButton;
-// export default SignOutButton;
-// export default YourHobbiesButton;
-// export default SubmitButton;
+export default QuestionForm;
