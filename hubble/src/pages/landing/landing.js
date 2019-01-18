@@ -5,7 +5,7 @@ import API from "../../utils/API"
 import { Button, Container, Row, Col, Jumbotron, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 
-class User extends React.Component {
+class Home extends React.Component {
     state = -{
         name: "",
         userame: "",
@@ -27,6 +27,11 @@ class User extends React.Component {
         this.contiune();
 
     };
+    
+    checkUser = () => {
+        //  add logic for sign in and sign up buttons to pull up respaective forms.
+        this.contiune();
+    }
 
     toggle = () => {
         this.setState({ modal: !this.state.modal });
@@ -41,19 +46,17 @@ class User extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.title && this.state.author) {
+        if (this.state.userame) {
             API.saveUser({
                 name: this.state.name,
                 username: this.state.username,
                 password: this.state.password,
                 zipcode: this.state.zipcode,
             })
-                .then(res => this.loadBooks())
                 .catch(err => console.log(err));
             // add alert if missing field
         }
     };
-    //  add logic for sign in and sign up buttons to pull up respaective forms.
     render() {
         return (
             <Container fluid>
@@ -82,7 +85,7 @@ class User extends React.Component {
                                         <Input type="password" name="password" id="password" placeholder="password" />
                                     </Col>
                                 </FormGroup>
-                                <Button color="success" onClick={this.handleFormSubmit} >Sign In! </Button>{' '}
+                                <Button color="success" onClick={this.checkUser} >Sign In! </Button>{' '}
                                 <Button color="info" onClick={this.toggle}>Sign Up!</Button>{' '}
                             </Form>
                         </Col>
@@ -125,4 +128,4 @@ class User extends React.Component {
     }
 }
 
-export default User;
+export default Home;
